@@ -11,11 +11,9 @@
 module load bioinfo-tools
 module load trimmomatic
 # Your commands
-java -jar /sw/apps/bioinfo/trimmomatic/0.36/rackham/trimmomatic-0.36.jar PE -phred33 \
-/home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/fastqc/E745-1.L500_SZAXPI015146-56_1_clean_fastqc.zip \
-/home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/fastqc/E745-1.L500_SZAXPI015146-56_2_clean_fastqc.zip \
+trimmomatic PE -phred33 \
+/home/hahy8450/GenomeAnalysis/GenomeAnalysis/data/rawdata/genomics_data/Illumina/E745-1.L500_SZAXPI015146-56_1_clean.fq.gz /home/hahy8450/GenomeAnalysis/GenomeAnalysis/data/rawdata/genomics_data/Illumina/E745-1.L500_SZAXPI015146-56_2_clean.fq.gz \
 /home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/trimmomatic/output_forward_paired.fq.gz \
 /home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/trimmomatic/output_forward_unpaired.fq.gz \
 /home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/trimmomatic/output_reverse_paired.fq.gz \
-/home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/trimmomatic/output_reverse_unpaired.fq.gz \
-TRAILING:20
+/home/hahy8450/GenomeAnalysis/GenomeAnalysis/result/01_preprocessing/Illumina/trimmomatic/output_reverse_unpaired.fq.gz TRAILING:20 LEADING:3 MINLEN:36
